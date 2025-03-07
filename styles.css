@@ -2,17 +2,13 @@
     box-sizing: border-box;
 }
 
-p {
- font-family: "Lato", sans-serif;
- line-height: 1.8;
-}
-p2 {
-   font-family: "Lato", sans-serif;
-   color: black;
-}
 body {
     margin: 0;
     padding: 0;
+}
+p {
+ font-family: "Lato", sans-serif;
+ line-height: 1.8;
 }
 
 header {
@@ -68,6 +64,10 @@ h1 {
     color: #59331D;
     font-family: "Poppins", sans-serif;
 }
+h2 {
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
 .sf-link {
   color: #D98555;
   text-decoration: underline;
@@ -75,6 +75,53 @@ h1 {
 .sf-link:hover {
   color: #082B59;
 }
+
+.hero {
+    background-image: url("images/gulp-couple-talking.jpg"); 
+    background-size: cover;
+    background-position: center;
+    height: 50vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 20px;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    border-radius: 20px;
+  }
+  
+  .about {
+    padding: 20px;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .about-image {
+    flex: 1;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about-text {
+    flex: 2;
+    
+   
+ 
+  }
+
 .cta-button {
     display: inline-block;
     padding: 10px 20px; 
@@ -135,6 +182,45 @@ h1 {
   text-align: center;
 }
 
+.product-grid {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    margin-bottom: 0; 
+}
+
+.product-item h2 {
+    margin-bottom: 5px;
+    font-size: 1.23em;
+    font-family: "Poppins", sans-serif;
+}
+
+.product-item p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    padding: 10px; 
+    font-family: "Lato", sans-serif;
+}
+
+
+
+
 footer {
     text-align: center;
     padding: 20px 0;
@@ -166,12 +252,15 @@ footer {
     color: white;
 }
 
+
 /* Mobile Styles (up to 600px) */
 @media (max-width: 600px) {
     main {
         padding: 10px;
     }
-
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
     .box {
         width: 90%;
         padding: 20px;
@@ -185,13 +274,17 @@ footer {
         text-align: center;
         padding: 10px;
     }
- 
+    
 }
 
 /* Tablet Styles (601px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     main {
         padding: 50px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; 
     }
 
     .content-container {
@@ -211,6 +304,13 @@ footer {
 @media (min-width: 1025px) {
     main {
         padding: 100px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 10px;
+        padding: 10px;
     }
 
     .box {
