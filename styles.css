@@ -85,7 +85,7 @@ h2 {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+}
   
   .hero-content {
     background-color: rgba(0, 0, 0, 0.5); 
@@ -94,33 +94,30 @@ h2 {
     position: relative;
     font-family: "Poppins", sans-serif;
     border-radius: 20px;
-  }
+}
   
-  .about {
+.about {
     padding: 20px;
-  }
+}
   
   .about-content {
     display: flex;
     align-items: center;
     gap: 20px;
-  }
+}
   
-  .about-image {
+.about-image {
     flex: 1;
-  }
+}
   
-  .about-image img {
+.about-image img {
     max-width: 100%;
     height: auto;
-  }
+}
   
   .about-text {
     flex: 2;
-    
-   
- 
-  }
+}
 
 .cta-button {
     display: inline-block;
